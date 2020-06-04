@@ -31,7 +31,7 @@ defmodule ObanDashboard.MixProject do
       {:plug_cowboy, "~> 2.0", only: :dev},
       {:jason, "~> 1.0", only: [:dev, :test, :docs]},
       {:floki, "~> 0.24.0", only: :test},
-      {:ex_doc, "~> 0.21", only: :docs},
+      {:ex_doc, "~> 0.21", only: :docs}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]

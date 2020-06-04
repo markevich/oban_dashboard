@@ -9,7 +9,7 @@ defmodule ObanDashboard.Router do
         import Phoenix.LiveView.Router, only: [live: 4]
 
         opts = ObanDashboard.Router.__options__(opts)
-        live "/", ObanDashboard.HomeLive, :home, opts
+        live("/", ObanDashboard.HomeLive, :home, opts)
       end
     end
   end
