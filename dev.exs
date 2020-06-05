@@ -22,8 +22,8 @@ Application.put_env(:oban_dashboard, DemoWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"lib/oban_dashboard/(live|views)/.*(ex)$",
-      ~r"lib/oban_dashboard/templates/.*(ex)$"
+      ~r"lib/oban_dashboard_web/(live|views)/.*(ex)$",
+      ~r"lib/oban_dashboard_web/templates/.*(ex)$"
     ]
   ]
 )
@@ -36,7 +36,7 @@ defmodule DemoWeb.PageController do
   def call(conn, :index) do
     content(conn, """
     <h2>Oban Dashboard Dev</h2>
-    <a href="/oban_dashboard" target="_blank">Open Dashboard</a>
+    <a href="/oban_dashboard">Open Dashboard</a>
     """)
   end
 
@@ -54,7 +54,7 @@ end
 
 defmodule DemoWeb.Router do
   use Phoenix.Router
-  import ObanDashboard.Router
+  import ObanDashboardWeb.Router
 
   pipeline :browser do
     plug :fetch_session

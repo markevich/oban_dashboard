@@ -1,5 +1,5 @@
-defmodule ObanDashboard.HomeLive do
-  use ObanDashboard.Web, :live_view
+defmodule ObanDashboardWeb.HomeLive do
+  use ObanDashboardWeb, :live_view
 
   @impl true
   def mount(_params, _session, socket) do
@@ -14,7 +14,7 @@ defmodule ObanDashboard.HomeLive do
   @impl true
   def render(assigns) do
     ~L"""
-    <div>Hello</div>
+    <div>Hello oban!</div>
     """
   end
 end
