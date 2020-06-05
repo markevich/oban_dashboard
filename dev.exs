@@ -1,3 +1,4 @@
+
 # iex -S mix run dev.exs
 Logger.configure(level: :debug)
 
@@ -89,6 +90,9 @@ defmodule DemoWeb.Endpoint do
 end
 
 Application.put_env(:phoenix, :serve_endpoints, true)
+
+
+
 
 Task.start(fn ->
   children = [
