@@ -1,4 +1,4 @@
-defmodule ObanDashboard.Router do
+defmodule ObanDashboardWeb.Router do
   @moduledoc """
   Provides LiveView routing for ObanDashboard.
   """
@@ -8,8 +8,8 @@ defmodule ObanDashboard.Router do
       scope path, alias: false, as: false do
         import Phoenix.LiveView.Router, only: [live: 4]
 
-        opts = ObanDashboard.Router.__options__(opts)
-        live("/", ObanDashboard.HomeLive, :home, opts)
+        opts = ObanDashboardWeb.Router.__options__(opts)
+        live("/", ObanDashboardWeb.HomeLive, :home, opts)
       end
     end
   end
@@ -21,7 +21,7 @@ defmodule ObanDashboard.Router do
     [
       session: %{},
       private: %{live_socket_path: live_socket_path},
-      layout: {ObanDashboard.LayoutView, :dash},
+      layout: {ObanDashboardWeb.LayoutView, :dash},
       as: :oban_dashboard
     ]
   end

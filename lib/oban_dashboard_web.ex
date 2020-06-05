@@ -1,4 +1,4 @@
-defmodule ObanDashboard.Web do
+defmodule ObanDashboardWeb do
   @moduledoc false
 
   @doc false
@@ -8,7 +8,7 @@ defmodule ObanDashboard.Web do
 
       use Phoenix.View,
         namespace: Phoenix.LiveDashboard,
-        root: "lib/oban_dashboard/templates"
+        root: "lib/oban_dashboard_web/templates"
 
       unquote(view_helpers())
     end
@@ -18,7 +18,7 @@ defmodule ObanDashboard.Web do
   def live_view do
     quote do
       @moduledoc false
-      use Phoenix.LiveView, layout: {ObanDashboard.LayoutView, "live.html"}
+      use Phoenix.LiveView, layout: {ObanDashboardWeb.LayoutView, "live.html"}
       unquote(view_helpers())
     end
   end
